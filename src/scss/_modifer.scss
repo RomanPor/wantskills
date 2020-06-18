@@ -1,0 +1,145 @@
+$base-body-font-family: $font-family;
+$base-body-font-weight: $font-weight-regular;
+$base-body-font-size: $font-size;
+$global-font-family: $font-family;
+$global-color: $black;
+$global-link-color: $orange;
+$global-link-hover-color: $dark-orange;
+
+$section-padding-vertical: 24px;
+$section-padding-vertical-m: 48px;
+
+$section-large-padding-vertical: 48px;
+$section-large-padding-vertical-m: 64px;
+
+$section-muted-background: $very-light-gray;
+
+$container-padding-horizontal: 16px;
+$container-padding-horizontal-s: 24px;
+$container-padding-horizontal-m: 48px;
+
+$grid-gutter-horizontal-l: 24px;
+$grid-gutter-vertical-l: 24px;
+$grid-gutter-horizontal: 16px;
+$grid-gutter-vertical: 16px;
+
+$grid-medium-gutter-vertical: 16px;
+$grid-medium-gutter-horizontal: 16px;
+
+$grid-small-gutter-horizontal: 16px;
+$grid-small-gutter-vertical: 8px;
+
+$margin-small-margin: 8px;
+$margin-margin: 16px;
+$margin-medium-margin: 24px;
+$margin-large-margin: 32px;
+$margin-large-margin-l: 32px;
+$margin-xlarge-margin: 32px;
+$margin-xlarge-margin-l: 48px;
+
+$button-padding-horizontal: 24px;
+$button-primary-hover-background: $hover-orange;
+$button-primary-active-background: $dark-orange;
+$button-primary-background: $orange;
+
+@mixin hook-button {
+  border-radius: 4px;
+  line-height: 48px;
+  transition: all .3s ease;
+  font-size: 16px;
+  font-weight: $font-weight-medium;
+}
+
+$button-default-color: $orange;
+$button-default-active-background: $dark-orange;
+$button-default-active-color: $white;
+$button-default-hover-background: $orange;
+$button-default-hover-color: $white;
+
+@mixin hook-button-default {
+  border: 1px solid $orange;
+  line-height: 46px;
+}
+
+$base-margin-vertical: 16px;
+$base-h1-font-size-m: 48px;
+$base-h1-font-size: 32px;
+$base-h2-font-size-m: 32px;
+$base-h2-font-size: 24px;
+$base-h3-font-size: 24px;
+$base-h4-font-size: 20px;
+$base-h5-font-size: 16px;
+$base-h6-font-size: 14px;
+
+@mixin hook-heading-misc {
+  h1, .uk-h1 {
+    font-weight: $font-weight-bold;
+    @media screen and (max-width: 959px) {
+      font-weight: $font-weight-semibold;
+    }
+  }
+  h2, .uk-h2 {
+    font-weight: $font-weight-semibold;
+  }
+  h3, .uk-h3 {
+    font-weight: $font-weight-semibold;
+    @media screen and (max-width: 959px) {
+      font-size: 20px;
+    }
+  }
+  h4, .uk-h4 {
+    font-weight:  $font-weight-semibold;
+  }
+}
+
+@mixin hook-form-misc {
+  .uk-input {
+    line-height: 38px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid #DADADA;
+    background: $white;
+    color: $black;
+    font-size: 16px;
+    transition:  all .3s ease;
+    &:hover {
+      border-color: $orange;
+
+    }
+    &:focus {
+      color: $black;
+      border-bottom-color: $orange;
+    }
+    &::placeholder {
+      color: $gray;
+    }
+  }
+}
+
+$offcanvas-bar-background: $white;
+$offcanvas-bar-width: 100%;
+$offcanvas-bar-width-m: 320px;
+$offcanvas-bar-padding-horizontal: 0;
+$offcanvas-bar-padding-vertical: 0;
+$offcanvas-bar-padding-horizontal-m: 0;
+$offcanvas-bar-padding-vertical-m: 0;
+$offcanvas-close-position: unset;
+
+@mixin hook-offcanvas-misc {
+  .uk-offcanvas {
+    width: 100%;
+  }
+  .uk-offcanvas-close {
+    position: unset;
+    padding: 0;
+    outline: none;
+  }
+}
+
+@mixin hook-offcanvas-bar {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 639px) {
+    width: 320px;
+  }
+}
